@@ -1,0 +1,104 @@
+.customSelect-container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    height: 1.45em;
+    z-index: 9999;
+    overflow: visible;
+}
+.customSelect-container,
+.customSelect-container:active,
+.customSelect-container:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.customSelect-container span {
+    display: block;
+}
+
+.customSelect-input {
+    height: 37px;
+}
+/** Clear fix - nicked from H5BP */
+.customSelect-input:before,
+.customSelect-input:after {
+    content: " ";
+    display: table;
+}
+.customSelect-input:after {
+    clear: both;
+}
+/* end clear fix */
+
+
+.customSelect-container,
+.customSelect-input,
+.customSelect-label,
+.customSelect-handle {
+    vertical-align: baseline;
+    overflow: hidden;
+}
+.customSelect-container,
+.customSelect-input {
+    height: 21px;
+}
+.customSelect-container.showMenu {
+    height: auto;
+    overflow: visible;
+}
+
+
+.customSelect-label,
+.customSelect-handle {
+    height: 100%;
+}
+.customSelect-label {
+    float: left;
+    width: 88%;
+}
+.customSelect-label.disabled {
+    font-style: italic;
+}
+
+.customSelect-handle {
+    float: right;
+    width: 12%;
+}
+
+
+.customSelect-container,
+.customSelect-options {
+    border: 1px solid #000000;
+    background: #ffffff;
+}
+.customSelect-options {
+    position: relative;
+    top: 1px;
+    left: -1px;
+    border-top: none;
+    width: 100%;
+}
+
+
+.customSelect-option {
+    border-top: 1px solid #000000;
+
+    /* Prevent the text cursor from appearing when hovering over the option's text */
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.customSelect-option.hover {
+    color: #ffffff;
+    background-color: #333333;
+}
+.customSelect-option.disabled {
+    color: #444444;
+    font-style: italic;
+}

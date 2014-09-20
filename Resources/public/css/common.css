@@ -1,0 +1,121 @@
+/**
+ * Common styles used by Dan across all sites
+ */
+
+
+/**
+ * Basic Anchor Styles
+ *
+ * Anchors will only be underlined if hovered or they have a <p> as an ancestor.
+ * I also use the .button class a lot for button looking anchors and I never want it to underline on hover.
+ */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+p a { text-decoration: underline; }
+
+
+
+
+/**
+ * Base .button class styles
+ *
+ * .button is a class I use alot for anchors that, well, are styled like buttons.
+ */
+.button { /* So padding and margin etc. take affect */
+    display: block;
+    text-decoration: none !important; /* Never want the text to underline, including on hover */
+}
+p a.button {
+    display: inline-block; /* Buttons within a paragraph should be inline */
+}
+input.button {
+    border: 0;
+}
+
+
+
+
+/**
+ * All my sites are contained within a pageContainer root element
+ */
+#pageContainer {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+
+/**
+ * Centre content within the user's browser
+ *
+ * usage:
+ *  <div class="fullWidth-container">
+ *      <div class="fullWidth-centre-container">
+ *          <!-- Content to be Centred -->
+ *      </div>
+ *  </div>
+ */
+.fullWidth-container {
+    position: relative;
+    width: 100% !important;
+}
+    .fullWidth-container>.fullWidth-centre-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 980px;
+    }
+
+
+
+
+/**
+ * Use a UL/OL for layout.
+ *
+ * Generally used by menus
+ *
+ * usage:
+ *  <ul class="layoutList">...</ul>
+ *  OR
+ *  <ul class="layoutList layoutList-horizontal">...</ul>
+ */
+.layoutList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.layoutList-horizontal>li,
+.layoutList.horizontal>li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
+/**
+ * Page channels
+ */
+.channels {
+    *zoom: 1;
+}
+    .channels:before,
+    .channels:after {
+        content: " ";
+        display: table;
+    }
+    .channels:after {
+        clear: both;
+    }
+.channel.left {
+    float: left;
+}
+.channel.right {
+    float: right;
+}
+article .channel.left+aside {
+    float: right;
+}
+article .channel.right+aside {
+    float: left;
+}

@@ -1,0 +1,24 @@
+/*input.styledInput,
+select.styledInput {
+    z-index: 5;
+}*/
+input.styledInput { display: none; }
+select.styledInput {
+    opacity: 0;
+    position: relative;
+}
+span.styledInput {
+    cursor: pointer;
+}
+span.styledInput.disabled {
+    cursor: auto;
+}
+span.styledInput.select {
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid black;
+}
+span.styledInput.checkbox,
+span.styledInput.radio {
+    display: inline-block;
+}

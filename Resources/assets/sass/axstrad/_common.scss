@@ -1,0 +1,108 @@
+/**
+ * Common styles used by Dan across all sites
+ */
+
+
+/**
+ * Basic Anchor Styles
+ *
+ * Anchors will only be underlined if hovered or they have a <p> as an ancestor.
+ * I also use the .button class a lot for button looking anchors and I never want it to underline on hover.
+ */
+a { text-decoration: none; }
+a[href^='tel:']:hover { text-decoration: none; }
+a:hover { text-decoration: underline; }
+p a { text-decoration: underline; }
+
+
+
+
+/**
+ * Base .button class styles
+ *
+ * .button is a class I use alot for anchors that, well, are styled like buttons.
+ */
+.button { /* So padding and margin etc. take affect */
+    display: block;
+    text-decoration: none !important; /* Never want the text to underline, including on hover */
+}
+p a.button {
+    display: inline-block; /* Buttons within a paragraph should be inline */
+}
+input.button {
+    line-height: 1 !important; /* Can't set line-height on inputs in Firefox, so make all other browsers the same */
+    border: 0;
+}
+
+
+
+/**
+ * Centre content within the user's browser
+ *
+ * usage:
+ *  <div class="fullWidth-container">
+ *      <div class="fullWidth-centre-container">
+ *          <!-- Content to be Centred -->
+ *      </div>
+ *  </div>
+ */
+.fullWidth-container {
+    position: relative;
+    width: 100% !important;
+    min-width: 980px;
+
+    >.fullWidth-centre-container {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 980px;
+    }
+}
+
+
+
+/**
+ * Use a UL/OL for layout.
+ *
+ * Generally used by menus
+ *
+ * usage:
+ *  <ul class="layoutList">...</ul>
+ *  OR
+ *  <ul class="layoutList layoutList-horizontal">...</ul>
+ */
+.layoutList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.horizontal {
+        li {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+
+
+
+/**
+ * Page channels
+ */
+.channel.left {
+    float: left;
+}
+.channel.right {
+    float: right;
+}
+
+
+
+/** Base Pseudo element styles */
+%pseudoElement {
+    content: " ";
+    display: block;
+}
+%pseudoElement-absolute {
+    position: absolute;
+}
