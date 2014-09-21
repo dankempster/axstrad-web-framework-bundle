@@ -147,4 +147,17 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
             $filters['ucwords']->compile()
         );
     }
+
+    /**
+     * @uses Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getFunctions
+     * @depends testProvidesCapitaliseFilter
+     */
+    public function testWrapSubstrFunctionsUsesAxstradUtility()
+    {
+        $functions = $this->fixture->getFunctions();
+        $this->assertEquals(
+            'Axstrad\Common\Util\StrUtil::wrapSubstr',
+            $functions['wrapsubstr']->compile()
+        );
+    }
 }

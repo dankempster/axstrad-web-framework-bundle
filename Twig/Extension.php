@@ -21,6 +21,9 @@ namespace Axstrad\Bundle\WebFrameworkBundle\Twig;
  *  * capitalise - Capitalises a string using PHP functions: strtolower(), followed by ucwords().
  *  * ucwords    - Uppercase the first character of each word in a string. Unlike capitalise, this filter doesn't lower
  *                 case the word first.
+ *
+ * Provides the following functions
+ *  * wrapsubstr - wraps HTML tags around $needle within $haystack
  */
 class Extension extends \Twig_Extension
 {
@@ -39,7 +42,7 @@ class Extension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'wrapsubstr' => new \Twig_Function_Function('Tjs\Common\Util\StrUtil::wrapSubstr'),
+            'wrapsubstr' => new \Twig_Function_Function('Axstrad\Common\Util\StrUtil::wrapSubstr'),
         );
     }
 
