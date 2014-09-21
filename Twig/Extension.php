@@ -1,8 +1,21 @@
 <?php
-namespace Axstrad\WebFrameworkBundle\Twig;
+/**
+ * This file is part of the Axstrad library.
+ *
+ * (c) Dan Kempster <dev@dankempster.co.uk>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author Dan Kempster <dev@dankempster.co.uk>
+ * @package Axstrad\WebFrameworkBundle
+ * @subpackage Twig
+ */
+namespace Axstrad\Bundle\WebFrameworkBundle\Twig;
+
 
 /**
- * Axstrad\WebFrameworkBundle\Twig\Extension
+ * Axstrad\Bundle\WebFrameworkBundle\Twig\Extension
  *
  * Provides the following filters
  *  * capitalise - Capitalises a string using PHP functions: strtolower(), followed by ucwords().
@@ -38,7 +51,7 @@ class Extension extends \Twig_Extension
      * @param  string $str The string to capitalise
      * @return string      The capitalised string
      */
-    public function capitalise($str){
+    public function capitalise($str) {
         return ucwords(strtolower($str));
     }
 
