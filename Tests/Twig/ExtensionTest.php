@@ -23,7 +23,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getName
+     * covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getName
      */
     public function testCorrectName()
     {
@@ -90,7 +90,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getFilters
+     * covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getFilters
      */
     public function testProvidesCapitaliseFilter()
     {
@@ -101,7 +101,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getFilters
+     * covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::getFilters
      */
     public function testProvidesUcwordsFilter()
     {
@@ -112,7 +112,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::capitalise
+     * covers Axstrad\Bundle\WebFrameworkBundle\Twig\Extension::capitalise
      */
     public function testCaptialiseMethodWorks()
     {
