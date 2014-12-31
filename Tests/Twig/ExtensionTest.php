@@ -9,7 +9,7 @@ use Axstrad\Bundle\WebFrameworkBundle\Twig\Extension;
 
 
 /**
- * @group unittests
+ * @group unit
  */
 class ExtensionTest extends \PHPUnit_Framework_TestCase
 {
